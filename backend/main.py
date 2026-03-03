@@ -8,6 +8,8 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
 from database import Database
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI(title="Anonymous Chat API")
 
@@ -248,3 +250,4 @@ async def websocket_endpoint(websocket: WebSocket):
         print(f"Error for user {user_id}: {e}")
         traceback.print_exc()
         await disconnect_user(user_id, reason="disconnected")
+
