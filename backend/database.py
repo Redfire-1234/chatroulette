@@ -3,9 +3,7 @@ import asyncpg
 from datetime import datetime
 
 DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql://postgres:EuZTb19VZKPwmLPN@db.dsrhrytbakxuqvjtjvgk.supabase.co:5432/postgres"
-)
+    "DATABASE_URL")
 
 
 class Database:
